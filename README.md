@@ -1,36 +1,177 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portal do Cadastro Social Único (CSU)
 
-## Getting Started
+Uma landing page simples e focada para o Portal do Cadastro Social Único, desenvolvida com Next.js, Tailwind CSS e DaisyUI.
 
-First, run the development server:
+## 🎨 Paleta de Cores
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Cor      | Proporção | Código Hex |
+| -------- | --------- | ---------- |
+| Vermelho | 60%       | `#DA291C`  |
+| Preto    | 30%       | `#000000`  |
+| Amarelo  | 10%       | `#FFCD00`  |
+
+## 🚀 Tecnologias Utilizadas
+
+- **Next.js 15.4.5** - Framework React
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS 3.4.0** - Framework CSS utilitário
+- **DaisyUI 5.0.50** - Componentes UI
+- **PostCSS** - Processador CSS
+- **Autoprefixer** - Prefixos automáticos
+
+## 📁 Estrutura do Projeto
+
+```
+csu-next/
+├── src/
+│   └── app/
+│       ├── page.tsx              # Landing page principal
+│       ├── layout.tsx            # Layout raiz
+│       └── globals.css           # Estilos globais
+├── public/                       # Arquivos estáticos
+├── tailwind.config.js            # Configuração Tailwind + DaisyUI
+├── postcss.config.mjs            # Configuração PostCSS
+└── package.json                  # Dependências e scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Seções da Landing Page
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. **Cabeçalho/Menu** (`#header`)
+- Navegação responsiva com logo CSU
+- Menu hambúrguer para mobile
+- Links para todas as seções
+- Botão de acesso ao sistema
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. **Banner/Hero** (`#banner`)
+- Seção de destaque com gradiente
+- Logo CSU em destaque
+- Título principal e descrição
+- Call-to-action buttons
 
-## Learn More
+### 3. **Indicadores** (`#indicadores`)
+- Estatísticas do sistema CSU
+- Números impactantes (40M+ famílias, 15+ programas, etc.)
+- Layout em grid responsivo
 
-To learn more about Next.js, take a look at the following resources:
+### 4. **Documentos** (`#documentos`)
+- Grid de documentos importantes
+- Manual do usuário, regulamentação, política de privacidade
+- Botões de download para cada documento
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. **Parceiros** (`#parceiros`)
+- Grid de parceiros institucionais
+- Ministérios, bancos, órgãos governamentais
+- Layout responsivo com ícones
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 6. **FAQs** (`#faqs`)
+- Accordion com perguntas frequentes
+- 6 perguntas principais sobre o CSU
+- Respostas detalhadas e úteis
 
-## Deploy on Vercel
+### 7. **Contato** (`#contato`)
+- Formulário de contato completo
+- Informações de contato (telefone, email, horário)
+- Seção de atendimento emergencial
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 8. **Localização** (`#localizacao`)
+- Mapa interativo (simulado)
+- Lista de escritórios principais
+- Horários de funcionamento
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 9. **Rodapé** (`#footer`)
+- Logo e descrição do CSU
+- Links para todas as seções
+- Informações de contato
+- Redes sociais
+- Copyright
+
+## 🎨 Design System
+
+### Cores Personalizadas
+- `csu-red`: #DA291C (60% - Cor principal)
+- `csu-black`: #000000 (30% - Textos e elementos escuros)
+- `csu-yellow`: #FFCD00 (10% - Destaques e CTAs)
+
+### Componentes Utilizados
+- **Navbar** - Navegação responsiva
+- **Hero Section** - Seção de destaque
+- **Cards** - Exibição de conteúdo
+- **Accordion** - FAQs
+- **Forms** - Formulário de contato
+- **Grid Layouts** - Organização de conteúdo
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+- Node.js 18+ 
+- npm ou yarn
+
+### Instalação
+```bash
+# Navegar para o diretório do projeto
+cd csu-next
+
+# Instalar dependências
+npm install
+
+# Executar em modo de desenvolvimento
+npm run dev
+```
+
+### Scripts Disponíveis
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Constrói o projeto para produção
+- `npm run start` - Inicia o servidor de produção
+- `npm run lint` - Executa o linter
+
+## 📱 Responsividade
+
+O projeto é totalmente responsivo e funciona em:
+- **Desktop** (1024px+)
+- **Tablet** (768px - 1023px)
+- **Mobile** (320px - 767px)
+
+## 🎯 Navegação
+
+A landing page possui navegação suave entre seções:
+- **Indicadores** - Estatísticas do sistema
+- **Documentos** - Downloads importantes
+- **Parceiros** - Instituições parceiras
+- **FAQs** - Perguntas frequentes
+- **Contato** - Formulário e informações
+
+## 📊 Conteúdo
+
+### Indicadores Principais
+- 40M+ Famílias Cadastradas
+- 15+ Programas Sociais
+- 100% Cobertura Nacional
+- 24/7 Disponibilidade
+
+### Documentos Disponíveis
+- Manual do Usuário
+- Regulamentação CSU
+- Política de Privacidade
+- Termos de Uso
+- Relatório Anual
+- FAQ Oficial
+
+### Parceiros Institucionais
+- Ministério da Cidadania
+- Caixa Econômica Federal
+- Banco do Brasil
+- INSS
+- Ministério da Educação
+- Ministério da Saúde
+- Governos Estaduais
+- Prefeituras
+
+## 📞 Informações de Contato
+
+- **Telefone**: 0800 707 2003
+- **Email**: csu@mds.gov.br
+- **Horário**: Segunda a Sexta, 8h às 18h
+
+## 📝 Licença
+
+Este projeto foi desenvolvido para fins educacionais e de demonstração do Portal do Cadastro Social Único.
