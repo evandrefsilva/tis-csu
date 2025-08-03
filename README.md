@@ -168,8 +168,8 @@ A landing page possui navegação suave entre seções:
 
 ## 📞 Informações de Contato
 
-- **Telefone**: 0800 707 2003
-- **Email**: csu@mds.gov.br
+- **Telefone**: 800 2008
+- **Email**: cncsu.oficial@mfids.gov.cv
 - **Horário**: Segunda a Sexta, 8h às 18h
 
 ## 📝 Licença
