@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function Modal() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -40,7 +40,7 @@ export default function Modal() {
     termosDenuncia: false
   });
 
-  const handleInputChange = (field: string, value: any) => {
+  const handleInputChange = (field: string, value: string | boolean | FileList | null) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -59,7 +59,7 @@ export default function Modal() {
     }
   };
 
-  const handleDenunciaInputChange = (field: string, value: any) => {
+  const handleDenunciaInputChange = (field: string, value: string | boolean | FileList | null) => {
     setDenunciaData(prev => ({
       ...prev,
       [field]: value
