@@ -37,7 +37,7 @@ export default function Header() {
         </div>
         <div className="navbar-end">
           <button className="btn bg-csu-yellow text-csu-black hover:bg-csu-yellow/90 border-none">
-            Cadastrar-se
+            Plataforma do CSU
           </button>
         </div>
       </div>
