@@ -42,7 +42,7 @@ export default function Localizacao() {
                     <div>
                       <h4 className="font-semibold text-csu-black">Praia - Santiago</h4>
                       <p className="text-sm text-gray-600">Achada de Santo António - Rua Cidade do Funchal, Nº 2</p>
-                      <p className="text-sm text-gray-600">Cidade da Praia, República de Cabo Verde</p>
+                      <p className="text-sm text-gray-600">Cidade da Praia, República de Angola</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -50,7 +50,7 @@ export default function Localizacao() {
                     <div>
                       <h4 className="font-semibold text-csu-black">Mindelo - São Vicente</h4>
                       <p className="text-sm text-gray-600">Rua da República, 150</p>
-                      <p className="text-sm text-gray-600">Mindelo, São Vicente, República de Cabo Verde</p>
+                      <p className="text-sm text-gray-600">Mindelo, São Vicente, República de Angola</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -58,7 +58,7 @@ export default function Localizacao() {
                     <div>
                       <h4 className="font-semibold text-csu-black">Sal - Ilha do Sal</h4>
                       <p className="text-sm text-gray-600">Rua da Liberdade, 75</p>
-                      <p className="text-sm text-gray-600">Santa Maria, Sal, República de Cabo Verde</p>
+                      <p className="text-sm text-gray-600">Santa Maria, Sal, República de Angola</p>
                     </div>
                   </div>
                 </div>

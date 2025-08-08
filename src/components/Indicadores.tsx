@@ -15,7 +15,7 @@ export default function Indicadores() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Indicadores</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Números que mostram o impacto real do sistema CSU em Cabo Verde
+            Números que mostram o impacto real do sistema CSU em Angola
           </p>
         </div>
         

@@ -20,20 +20,21 @@ export default function TutelaCSU() {
           <div className="text-center lg:text-left">
                           <div className="bg-gradient-to-br from-csu-red/5 to-csu-red/10 rounded-xl p-8 mb-6 shadow-lg border border-csu-red/20">
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
-                <div className="w-12 h-12 bg-csu-red rounded-full flex items-center justify-center">
+                <div className="w-14 h-16 bg-csu-red rounded-full flex-auto flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                   </svg>
                 </div>
-                <div>
-                  <div className="text-csu-black font-bold text-xl mb-1">MINISTÉRIO DA FAMÍLIA,</div>
-                  <div className="text-csu-black font-bold text-xl mb-1">INCLUSÃO E DESENVOLVIMENTO SOCIAL</div>
-                  <div className="text-csu-red font-semibold">MFIDS</div>
+                <div className="uppercase ">
+                  <p className="text-csu-black font-bold text-sm mb-1">MINISTÉRIO DA ACÇÃO SOCIAL,</p>
+                  <p className="text-csu-black font-bold text-sm mb-1">FAMÍLIA E PROMOÇÃO DA MULHER (MASFAMU)
+                  Responsável pela coordenação das políticas sociais em Angola</p>
+                  <div className="text-csu-red font-semibold">MASFAMU</div>
                 </div>
               </div>
             </div>
             <p className="text-csu-black/70 leading-relaxed text-lg">
-              O Ministério da Família, Inclusão e Desenvolvimento Social (MFIDS) é o departamento governamental responsável pela Proteção Social ao nível da rede de segurança, bem como, pela tutela e coordenação interinstitucional do Cadastro Social Único.
+            O MASFAMU lidera a formulação e execução das políticas e estratégias de ação social, com foco na promoção da dignidade humana, inclusão social e desenvolvimento das comunidades. 
             </p>
           </div>
           
@@ -47,13 +48,13 @@ export default function TutelaCSU() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-bold text-xl mb-1">GOVERNO DE CABO VERDE</div>
+                  <div className="text-white font-bold text-xl mb-1">GOVERNO DE ANGOLA</div>
                   <div className="text-white/90 font-semibold">A TRABALHAR PARA TODOS</div>
                 </div>
               </div>
             </div>
             <p className="text-csu-black/70 leading-relaxed text-lg">
-              O Governo de Cabo Verde coordena e supervisiona a implementação do CSU, garantindo que o sistema funcione de forma eficiente e transparente para beneficiar todos os cidadãos.
+              O Governo de Angola coordena e supervisiona a implementação do CSU, garantindo que o sistema funcione de forma eficiente e transparente para beneficiar todos os cidadãos.
             </p>
           </div>
         </div>

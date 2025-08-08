@@ -1,6 +1,67 @@
 'use client';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+
+  // Função para detectar seção ativa durante o scroll
+  const handleScroll = () => {
+    const sections = ['indicadores', 'documentos', 'parceiros', 'faqs', 'contato'];
+    const headerHeight = 80;
+    
+    for (const sectionId of sections) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= headerHeight + 100 && rect.bottom >= headerHeight + 100) {
+          setActiveSection(sectionId);
+          break;
+        }
+      }
+    }
+  };
+
+  // Adicionar listener de scroll
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      // Fechar menu mobile se estiver aberto
+      setIsMenuOpen(false);
+      
+      // Adicionar classe de loading ao link clicado
+      const clickedLink = e.currentTarget;
+      clickedLink.classList.add('opacity-50');
+      
+      // Calcular offset para o header fixo
+      const headerHeight = 80; // Altura aproximada do header
+      const targetPosition = targetElement.offsetTop - headerHeight;
+      
+      // Scroll suave com callback
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Remover classe de loading após a animação
+      setTimeout(() => {
+        clickedLink.classList.remove('opacity-50');
+      }, 1000);
+      
+      // Adicionar highlight temporário na seção de destino
+      targetElement.classList.add('ring-2', 'ring-csu-yellow', 'ring-opacity-50');
+      setTimeout(() => {
+        targetElement.classList.remove('ring-2', 'ring-csu-yellow', 'ring-opacity-50');
+      }, 2000);
+    }
+  };
   return (
     <header className="bg-csu-red text-white shadow-lg sticky top-0 z-50">
       <div className="navbar container mx-auto px-4">
@@ -12,11 +73,11 @@ export default function Header() {
               </svg>
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a href="#indicadores" className="text-csu-red">Indicadores</a></li>
-              <li><a href="#documentos" className="text-csu-red">Documentos</a></li>
-              <li><a href="#parceiros" className="text-csu-red">Parceiros</a></li>
-              <li><a href="#faqs" className="text-csu-red">FAQs</a></li>
-              <li><a href="#contato" className="text-csu-red">Contato</a></li>
+              <li><a href="#indicadores" className={`text-csu-red transition-colors ${activeSection === 'indicadores' ? 'bg-csu-red/10' : ''}`} onClick={(e) => handleSmoothScroll(e, 'indicadores')}>Indicadores</a></li>
+              <li><a href="#documentos" className={`text-csu-red transition-colors ${activeSection === 'documentos' ? 'bg-csu-red/10' : ''}`} onClick={(e) => handleSmoothScroll(e, 'documentos')}>Documentos</a></li>
+              <li><a href="#parceiros" className={`text-csu-red transition-colors ${activeSection === 'parceiros' ? 'bg-csu-red/10' : ''}`} onClick={(e) => handleSmoothScroll(e, 'parceiros')}>Parceiros</a></li>
+              <li><a href="#faqs" className={`text-csu-red transition-colors ${activeSection === 'faqs' ? 'bg-csu-red/10' : ''}`} onClick={(e) => handleSmoothScroll(e, 'faqs')}>FAQs</a></li>
+              <li><a href="#contato" className={`text-csu-red transition-colors ${activeSection === 'contato' ? 'bg-csu-red/10' : ''}`} onClick={(e) => handleSmoothScroll(e, 'contato')}>Contato</a></li>
             </ul>
           </div>
           <div className="flex items-center gap-2">
@@ -28,11 +89,11 @@ export default function Header() {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-white">
-            <li><a href="#indicadores">Indicadores</a></li>
-            <li><a href="#documentos">Documentos</a></li>
-            <li><a href="#parceiros">Parceiros</a></li>
-            <li><a href="#faqs">FAQs</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="#indicadores" className={`transition-colors ${activeSection === 'indicadores' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'indicadores')}>Indicadores</a></li>
+            <li><a href="#documentos" className={`transition-colors ${activeSection === 'documentos' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'documentos')}>Documentos</a></li>
+            <li><a href="#parceiros" className={`transition-colors ${activeSection === 'parceiros' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'parceiros')}>Parceiros</a></li>
+            <li><a href="#faqs" className={`transition-colors ${activeSection === 'faqs' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'faqs')}>FAQs</a></li>
+            <li><a href="#contato" className={`transition-colors ${activeSection === 'contato' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'contato')}>Contato</a></li>
           </ul>
         </div>
         <div className="navbar-end">

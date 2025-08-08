@@ -131,45 +131,45 @@ export default function Modal() {
     <>
       {/* Modal Reclamação */}
       <dialog id="modal-reclamacao" className="modal">
-        <div className="modal-box w-11/12 max-w-3xl bg-white shadow-2xl">
+        <div className="modal-box w-11/12 max-w-3xl bg-white shadow-2xl p-4 sm:p-6 md:p-8">
           <form method="dialog">
             <button className="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 hover:bg-gray-100">✕</button>
           </form>
           
           {/* Header */}
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-12 h-12 bg-csu-red rounded-full flex items-center justify-center mr-3">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="flex items-center justify-center mb-4 flex-col sm:flex-row">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-csu-red rounded-full flex items-center justify-center mb-2 sm:mb-0 sm:mr-3">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-csu-black">Formulário de Reclamação</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-csu-black text-center">Formulário de Reclamação</h3>
             </div>
             
             {/* Progress Steps */}
-            <div className="flex items-center justify-center mb-8">
-              <div className="flex items-center space-x-6">
+            <div className="flex items-center justify-center mb-6 sm:mb-8 overflow-x-auto">
+              <div className="flex items-center space-x-2 sm:space-x-6 min-w-max">
                 {[1, 2, 3].map((step) => (
                   <div key={step} className="flex items-center">
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm transition-all duration-300 ${
+                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm transition-all duration-300 ${
                       step <= currentStep ? 'bg-csu-red scale-110' : 'bg-gray-300'
                     }`}>
                       {step < currentStep ? (
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                         </svg>
                       ) : (
                         step
                       )}
                     </div>
-                    <span className={`ml-3 text-sm font-medium transition-colors duration-300 ${
+                    <span className={`ml-2 sm:ml-3 text-xs sm:text-sm font-medium transition-colors duration-300 hidden sm:block ${
                       step <= currentStep ? 'text-csu-red' : 'text-gray-500'
                     }`}>
                       {step === 1 ? 'Identificação' : step === 2 ? 'Endereço' : 'Reclamação'}
                     </span>
                     {step < 3 && (
-                      <div className={`w-12 h-1 ml-6 transition-all duration-300 ${
+                      <div className={`w-6 sm:w-12 h-1 ml-2 sm:ml-6 transition-all duration-300 ${
                         step < currentStep ? 'bg-csu-red' : 'bg-gray-300'
                       }`}></div>
                     )}
@@ -182,27 +182,27 @@ export default function Modal() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Step 1: Identificação */}
             <div className={`transition-all duration-500 ${currentStep === 1 ? 'block' : 'hidden'}`}>
-              <div className="bg-gradient-to-br from-csu-red/5 via-csu-yellow/5 to-csu-red/10 p-8 rounded-xl border-2 border-csu-red/30 shadow-lg">
-                <h4 className="font-bold text-2xl mb-8 text-csu-black flex items-center justify-center">
-                  <div className="w-10 h-10 bg-csu-red rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-gradient-to-br from-csu-red/5 via-csu-yellow/5 to-csu-red/10 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-csu-red/30 shadow-lg">
+                <h4 className="font-bold text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-csu-black flex items-center justify-center flex-col sm:flex-row">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-csu-red rounded-full flex items-center justify-center mb-2 sm:mb-0 sm:mr-4">
+                    <svg className="w-4 h-4 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                     </svg>
                   </div>
-                  Informações do Reclamante
+                  <span className="text-center">Informações do Reclamante</span>
                 </h4>
                 
-                <div className="space-y-8">
+                <div className="space-y-6 sm:space-y-8">
                   {/* Primeira linha - Nome e Telefone */}
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                     <div className="form-control">
-                      <label className="label pb-3">
-                        <span className="label-text font-bold text-csu-black text-lg">Nome do Reclamante *</span>
+                      <label className="label pb-2 sm:pb-3">
+                        <span className="label-text font-bold text-csu-black text-base sm:text-lg">Nome do Reclamante *</span>
                       </label>
                       <input 
                         type="text" 
                         placeholder="Nome completo" 
-                        className="input input-lg input-bordered bg-white border-2 border-csu-red/30 focus:border-csu-red focus:ring-2 focus:ring-csu-red/20 transition-all duration-300 rounded-lg" 
+                        className="input input-md sm:input-lg input-bordered bg-white border-2 border-csu-red/30 focus:border-csu-red focus:ring-2 focus:ring-csu-red/20 transition-all duration-300 rounded-lg" 
                         value={formData.nome}
                         onChange={(e) => handleInputChange('nome', e.target.value)}
                         required 
@@ -210,13 +210,13 @@ export default function Modal() {
                     </div>
                     
                     <div className="form-control">
-                      <label className="label pb-3">
-                        <span className="label-text font-bold text-csu-black text-lg">Telemóvel *</span>
+                      <label className="label pb-2 sm:pb-3">
+                        <span className="label-text font-bold text-csu-black text-base sm:text-lg">Telemóvel *</span>
                       </label>
                       <input 
                         type="tel" 
                         placeholder="Número de telefone" 
-                        className="input input-lg input-bordered bg-white border-2 border-csu-red/30 focus:border-csu-red focus:ring-2 focus:ring-csu-red/20 transition-all duration-300 rounded-lg" 
+                        className="input input-md sm:input-lg input-bordered bg-white border-2 border-csu-red/30 focus:border-csu-red focus:ring-2 focus:ring-csu-red/20 transition-all duration-300 rounded-lg" 
                         value={formData.telefone}
                         onChange={(e) => handleInputChange('telefone', e.target.value)}
                         required 
@@ -465,59 +465,59 @@ export default function Modal() {
               </div>
             </div>
             
-            {/* Navigation Buttons */}
-            <div className="flex justify-between items-center pt-10">
-              <button 
-                type="button" 
-                className={`btn btn-lg px-8 transition-all duration-300 ${
-                  currentStep > 1 
-                    ? 'bg-csu-black text-white hover:bg-gray-800 shadow-lg hover:scale-105 border-2 border-csu-black rounded-lg' 
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
-                }`}
-                onClick={handlePrevious}
-                disabled={currentStep === 1}
-              >
-                <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-                Anterior
-              </button>
-              
-              <div className="flex gap-6">
-                {currentStep < 3 ? (
-                  <button 
-                    type="button" 
-                    className={`btn btn-lg px-8 transition-all duration-300 ${
-                      isStepValid(currentStep)
-                        ? 'bg-csu-yellow text-csu-black hover:bg-yellow-400 shadow-lg hover:scale-105 border-2 border-csu-yellow font-bold rounded-lg'
-                        : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
-                    }`}
-                    onClick={handleNext}
-                    disabled={!isStepValid(currentStep)}
-                  >
-                    Seguinte
-                    <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                  </button>
-                ) : (
-                  <button 
-                    type="submit" 
-                    className={`btn btn-lg px-8 transition-all duration-300 ${
-                      isStepValid(currentStep)
-                                                     ? 'bg-csu-red text-white hover:bg-csu-red/90 shadow-lg hover:scale-105 border-2 border-csu-red font-bold rounded-lg'
-                        : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
-                    }`}
-                    disabled={!isStepValid(currentStep)}
-                  >
-                    <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                    </svg>
-                    Enviar Reclamação
-                  </button>
-                )}
-              </div>
-            </div>
+                                 {/* Navigation Buttons */}
+                     <div className="flex flex-col sm:flex-row justify-between items-center pt-6 sm:pt-10 gap-4 sm:gap-6">
+                       <button 
+                         type="button" 
+                         className={`btn btn-md sm:btn-lg px-4 sm:px-8 transition-all duration-300 w-full sm:w-auto ${
+                           currentStep > 1 
+                             ? 'bg-csu-black text-white hover:bg-gray-800 shadow-lg hover:scale-105 border-2 border-csu-black rounded-lg' 
+                             : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
+                         }`}
+                         onClick={handlePrevious}
+                         disabled={currentStep === 1}
+                       >
+                         <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+                         </svg>
+                         Anterior
+                       </button>
+                       
+                       <div className="flex gap-4 sm:gap-6 w-full sm:w-auto">
+                         {currentStep < 3 ? (
+                           <button 
+                             type="button" 
+                             className={`btn btn-md sm:btn-lg px-4 sm:px-8 transition-all duration-300 w-full ${
+                               isStepValid(currentStep)
+                                 ? 'bg-csu-yellow text-csu-black hover:bg-yellow-400 shadow-lg hover:scale-105 border-2 border-csu-yellow font-bold rounded-lg'
+                                 : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
+                             }`}
+                             onClick={handleNext}
+                             disabled={!isStepValid(currentStep)}
+                           >
+                             Seguinte
+                             <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                             </svg>
+                           </button>
+                         ) : (
+                           <button 
+                             type="submit" 
+                             className={`btn btn-md sm:btn-lg px-4 sm:px-8 transition-all duration-300 w-full ${
+                               isStepValid(currentStep)
+                                 ? 'bg-csu-red text-white hover:bg-csu-red/90 shadow-lg hover:scale-105 border-2 border-csu-red font-bold rounded-lg'
+                                 : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
+                             }`}
+                             disabled={!isStepValid(currentStep)}
+                           >
+                             <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                             </svg>
+                             Enviar Reclamação
+                           </button>
+                         )}
+                       </div>
+                     </div>
           </form>
           
           {/* Progress Indicator */}
@@ -532,46 +532,46 @@ export default function Modal() {
 
       {/* Modal Denúncia */}
       <dialog id="modal-denuncia" className="modal">
-        <div className="modal-box w-11/12 max-w-3xl bg-white shadow-2xl">
+        <div className="modal-box w-11/12 max-w-3xl bg-white shadow-2xl p-4 sm:p-6 md:p-8">
           <form method="dialog">
             <button className="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 hover:bg-gray-100">✕</button>
           </form>
           
-          {/* Header */}
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center mb-4">
-                                     <div className="w-12 h-12 bg-csu-yellow rounded-full flex items-center justify-center mr-3">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {/* Header */}
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="flex items-center justify-center mb-4 flex-col sm:flex-row">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-csu-yellow rounded-full flex items-center justify-center mb-2 sm:mb-0 sm:mr-3">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-csu-black">Formulário de Denúncia</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-csu-black text-center">Formulário de Denúncia</h3>
             </div>
             
             {/* Progress Steps */}
-            <div className="flex items-center justify-center mb-8">
-              <div className="flex items-center space-x-6">
-                {[1, 2].map((step) => (
+            <div className="flex items-center justify-center mb-6 sm:mb-8 overflow-x-auto">
+              <div className="flex items-center space-x-2 sm:space-x-6 min-w-max">
+                                {[1, 2].map((step) => (
                   <div key={step} className="flex items-center">
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm transition-all duration-300 ${
-                                                     step <= 1 ? 'bg-csu-yellow scale-110' : 'bg-gray-300'
+                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm transition-all duration-300 ${
+                      step <= 1 ? 'bg-csu-yellow scale-110' : 'bg-gray-300'
                     }`}>
                       {step < 1 ? (
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                         </svg>
                       ) : (
                         step
                       )}
                     </div>
-                    <span className={`ml-3 text-sm font-medium transition-colors duration-300 ${
-                                                     step <= 1 ? 'text-csu-yellow' : 'text-gray-500'
+                    <span className={`ml-2 sm:ml-3 text-xs sm:text-sm font-medium transition-colors duration-300 hidden sm:block ${
+                      step <= 1 ? 'text-csu-yellow' : 'text-gray-500'
                     }`}>
                       {step === 1 ? 'Identificação' : 'Denúncia'}
                     </span>
                     {step < 2 && (
-                      <div className={`w-12 h-1 ml-6 transition-all duration-300 ${
-                                                       step < 1 ? 'bg-csu-yellow' : 'bg-gray-300'
+                      <div className={`w-6 sm:w-12 h-1 ml-2 sm:ml-6 transition-all duration-300 ${
+                        step < 1 ? 'bg-csu-yellow' : 'bg-gray-300'
                       }`}></div>
                     )}
                   </div>
@@ -593,18 +593,18 @@ export default function Modal() {
                     Informações do Denunciante
                   </h4>
                   
-                  {/* Opção de Denúncia Anônima */}
-                  <div className="mb-8">
+                                    {/* Opção de Denúncia Anônima */}
+                  <div className="mb-6 sm:mb-8">
                     <button
                       type="button"
-                      className={`btn btn-outline w-full p-4 border-2 transition-all duration-300 ${
+                      className={`btn btn-outline w-full p-3 sm:p-4 border-2 transition-all duration-300 text-sm sm:text-base ${
                         isAnonymous 
-                                                       ? 'border-csu-yellow bg-csu-yellow/10 text-csu-black' 
-                             : 'border-csu-yellow/30 hover:border-csu-yellow'
+                          ? 'border-csu-yellow bg-csu-yellow/10 text-csu-black' 
+                          : 'border-csu-yellow/30 hover:border-csu-yellow'
                       }`}
                       onClick={() => setIsAnonymous(!isAnonymous)}
                     >
-                      <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                       </svg>
                       Quero fazer uma denúncia anónima
@@ -789,59 +789,59 @@ export default function Modal() {
                 </div>
               </div>
               
-              {/* Navigation Buttons */}
-              <div className="flex justify-between items-center pt-10">
-                <button 
-                  type="button" 
-                  className={`btn btn-lg px-8 transition-all duration-300 ${
-                    denunciaStep > 1 
-                      ? 'bg-csu-black text-white hover:bg-gray-800 shadow-lg hover:scale-105 border-2 border-csu-black rounded-lg' 
-                      : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
-                  }`}
-                  onClick={handleDenunciaPrevious}
-                  disabled={denunciaStep === 1}
-                >
-                  <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
-                  </svg>
-                  Anterior
-                </button>
-                
-                <div className="flex gap-6">
-                  {denunciaStep < 2 ? (
-                    <button 
-                      type="button" 
-                      className={`btn btn-lg px-8 transition-all duration-300 ${
-                        isDenunciaStepValid(denunciaStep)
-                                                       ? 'bg-csu-yellow text-csu-black hover:bg-csu-yellow/90 shadow-lg hover:scale-105 border-2 border-csu-yellow font-bold rounded-lg'
-                          : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
-                      }`}
-                      onClick={handleDenunciaNext}
-                      disabled={!isDenunciaStepValid(denunciaStep)}
-                    >
-                      Seguinte
-                      <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                      </svg>
-                    </button>
-                  ) : (
-                    <button 
-                      type="submit" 
-                      className={`btn btn-lg px-8 transition-all duration-300 ${
-                        isDenunciaStepValid(denunciaStep)
-                                                       ? 'bg-csu-red text-white hover:bg-csu-red/90 shadow-lg hover:scale-105 border-2 border-csu-red font-bold rounded-lg'
-                          : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
-                      }`}
-                      disabled={!isDenunciaStepValid(denunciaStep)}
-                    >
-                      <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                      </svg>
-                      Enviar Denúncia
-                    </button>
-                  )}
-                </div>
-              </div>
+                                   {/* Navigation Buttons */}
+                     <div className="flex flex-col sm:flex-row justify-between items-center pt-6 sm:pt-10 gap-4 sm:gap-6">
+                       <button 
+                         type="button" 
+                         className={`btn btn-md sm:btn-lg px-4 sm:px-8 transition-all duration-300 w-full sm:w-auto ${
+                           denunciaStep > 1 
+                             ? 'bg-csu-black text-white hover:bg-gray-800 shadow-lg hover:scale-105 border-2 border-csu-black rounded-lg' 
+                             : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
+                         }`}
+                         onClick={handleDenunciaPrevious}
+                         disabled={denunciaStep === 1}
+                       >
+                         <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+                         </svg>
+                         Anterior
+                       </button>
+                       
+                       <div className="flex gap-4 sm:gap-6 w-full sm:w-auto">
+                         {denunciaStep < 2 ? (
+                           <button 
+                             type="button" 
+                             className={`btn btn-md sm:btn-lg px-4 sm:px-8 transition-all duration-300 w-full ${
+                               isDenunciaStepValid(denunciaStep)
+                                 ? 'bg-csu-yellow text-csu-black hover:bg-csu-yellow/90 shadow-lg hover:scale-105 border-2 border-csu-yellow font-bold rounded-lg'
+                                 : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
+                             }`}
+                             onClick={handleDenunciaNext}
+                             disabled={!isDenunciaStepValid(denunciaStep)}
+                           >
+                             Seguinte
+                             <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                             </svg>
+                           </button>
+                         ) : (
+                           <button 
+                             type="submit" 
+                             className={`btn btn-md sm:btn-lg px-4 sm:px-8 transition-all duration-300 w-full ${
+                               isDenunciaStepValid(denunciaStep)
+                                 ? 'bg-csu-red text-white hover:bg-csu-red/90 shadow-lg hover:scale-105 border-2 border-csu-red font-bold rounded-lg'
+                                 : 'bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg'
+                             }`}
+                             disabled={!isDenunciaStepValid(denunciaStep)}
+                           >
+                             <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                             </svg>
+                             Enviar Denúncia
+                           </button>
+                         )}
+                       </div>
+                     </div>
             </form>
         </div>
       </dialog>

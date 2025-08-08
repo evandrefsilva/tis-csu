@@ -16,7 +16,7 @@ interface MapComponentProps {
 }
 
 export default function MapComponent({ className = "h-96 w-full" }: MapComponentProps) {
-  // Coordenadas dos escritórios em Cabo Verde
+  // Coordenadas dos escritórios em Angola
   const locations = [
     {
       name: "Praia - Santiago",
