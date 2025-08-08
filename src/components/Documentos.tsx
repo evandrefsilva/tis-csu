@@ -37,7 +37,7 @@ export default function Documentos() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-csu-black mb-4">
-            Documentos Importantes
+            Editais Importantes
           </h2>
           <p className="text-xl text-csu-black/70 max-w-3xl mx-auto">
             Acesse os principais documentos e regulamentações do CSU

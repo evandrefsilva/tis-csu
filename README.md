@@ -54,7 +54,7 @@ csu-next/
 - Layout em grid responsivo
 
 ### 4. **Documentos** (`#documentos`)
-- Grid de documentos importantes
+- Grid de Editais Importantes
 - Manual do usuário, regulamentação, política de privacidade
 - Botões de download para cada documento
 

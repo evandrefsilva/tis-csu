@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
   // Função para detectar seção ativa durante o scroll

@@ -1,5 +1,5 @@
-'use client';
-import Map from './Map';
+"use client";
+import Map from "./Map";
 
 export default function Localizacao() {
   return (
@@ -13,57 +13,24 @@ export default function Localizacao() {
             Encontre nossos principais pontos de atendimento
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Map */}
           <div className="card bg-white shadow-xl">
-            <div className="card-body">
-              <h3 className="card-title text-csu-black mb-6">Mapa de Atendimento</h3>
-              <div className="rounded-lg overflow-hidden">
-                <Map className="w-full h-96" />
-              </div>
-              <div className="mt-4 text-center">
-                <p className="text-sm text-gray-600 mb-2">Clique nos marcadores para ver mais informações</p>
-                                       <button className="btn btn-sm bg-csu-red text-white hover:bg-csu-red/90">
-                  Ver Mapa Completo
-                </button>
-              </div>
-            </div>
+            
+          <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11304.205419213182!2d13.239989497058989!3d-8.822550998614622!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f388f49cf983%3A0x9f4e3c0db10e958c!2sMASFAMU!5e1!3m2!1spt-PT!2sao!4v1754660053637!5m2!1spt-PT!2sao"
+                width="100%"
+                height="450"
+                style={{ border: "0" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
           </div>
 
           {/* Locations */}
           <div className="space-y-6">
-            <div className="card bg-white shadow-xl">
-              <div className="card-body">
-                <h3 className="card-title text-csu-black mb-4">Principais Escritórios</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-3 h-3 bg-csu-red rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-csu-black">Praia - Santiago</h4>
-                      <p className="text-sm text-gray-600">Achada de Santo António - Rua Cidade do Funchal, Nº 2</p>
-                      <p className="text-sm text-gray-600">Cidade da Praia, República de Angola</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-3 h-3 bg-csu-yellow rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-csu-black">Mindelo - São Vicente</h4>
-                      <p className="text-sm text-gray-600">Rua da República, 150</p>
-                      <p className="text-sm text-gray-600">Mindelo, São Vicente, República de Angola</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-3 h-3 bg-csu-black rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-csu-black">Sal - Ilha do Sal</h4>
-                      <p className="text-sm text-gray-600">Rua da Liberdade, 75</p>
-                      <p className="text-sm text-gray-600">Santa Maria, Sal, República de Angola</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <div className="card bg-csu-red text-white shadow-xl">
               <div className="card-body">
@@ -89,4 +56,4 @@ export default function Localizacao() {
       </div>
     </section>
   );
-} 
+}
