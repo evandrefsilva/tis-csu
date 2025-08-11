@@ -90,7 +90,7 @@ csu-next/
 ### Cores Personalizadas
 - `csu-red`: #DA291C (60% - Cor principal)
 - `csu-black`: #000000 (30% - Textos e elementos escuros)
-- `csu-yellow`: #FFCD00 (10% - Destaques e CTAs)
+- `csu-white`: #FFCD00 (10% - Destaques e CTAs)
 
 ### Componentes Utilizados
 - **Navbar** - Navegação responsiva

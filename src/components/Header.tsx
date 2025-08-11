@@ -56,18 +56,18 @@ export default function Header() {
       }, 1000);
       
       // Adicionar highlight temporário na seção de destino
-      targetElement.classList.add('ring-2', 'ring-csu-yellow', 'ring-opacity-50');
+      targetElement.classList.add('ring-2', 'ring-csu-white', 'ring-opacity-50');
       setTimeout(() => {
-        targetElement.classList.remove('ring-2', 'ring-csu-yellow', 'ring-opacity-50');
+        targetElement.classList.remove('ring-2', 'ring-csu-white', 'ring-opacity-50');
       }, 2000);
     }
   };
   return (
-    <header className="bg-csu-red text-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white text-black shadow-lg sticky top-0 z-50">
       <div className="navbar container mx-auto px-4">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-black">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16"></path>
               </svg>
@@ -81,23 +81,23 @@ export default function Header() {
             </ul>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-csu-yellow rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-csu-white rounded-full flex items-center justify-center">
               <span className="text-csu-black font-bold text-lg">C</span>
             </div>
             <span className="text-xl font-bold">CSU</span>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-white">
-            <li><a href="#indicadores" className={`transition-colors ${activeSection === 'indicadores' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'indicadores')}>Indicadores</a></li>
-            <li><a href="#documentos" className={`transition-colors ${activeSection === 'documentos' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'documentos')}>Editais</a></li>
-            <li><a href="#parceiros" className={`transition-colors ${activeSection === 'parceiros' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'parceiros')}>Parceiros</a></li>
-            <li><a href="#faqs" className={`transition-colors ${activeSection === 'faqs' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'faqs')}>FAQs</a></li>
-            <li><a href="#contato" className={`transition-colors ${activeSection === 'contato' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'contato')}>Contato</a></li>
+          <ul className="menu menu-horizontal px-1 text-black">
+            <li><a href="#indicadores" className={`transition-colors ${activeSection === 'indicadores' ? 'bg-csu-black/20 text-csu-black' : ''}`} onClick={(e) => handleSmoothScroll(e, 'indicadores')}>Indicadores</a></li>
+            <li><a href="#documentos" className={`transition-colors ${activeSection === 'documentos' ? 'bg-csu-black/20 text-csu-black' : ''}`} onClick={(e) => handleSmoothScroll(e, 'documentos')}>Editais</a></li>
+            <li><a href="#parceiros" className={`transition-colors ${activeSection === 'parceiros' ? 'bg-csu-black/20 text-csu-black' : ''}`} onClick={(e) => handleSmoothScroll(e, 'parceiros')}>Parceiros</a></li>
+            <li><a href="#faqs" className={`transition-colors ${activeSection === 'faqs' ? 'bg-csu-black/20 text-csu-black' : ''}`} onClick={(e) => handleSmoothScroll(e, 'faqs')}>FAQs</a></li>
+            <li><a href="#contato" className={`transition-colors ${activeSection === 'contato' ? 'bg-csu-black/20 text-csu-black' : ''}`} onClick={(e) => handleSmoothScroll(e, 'contato')}>Contato</a></li>
           </ul>
         </div>
         <div className="navbar-end">
-          <button className="btn bg-csu-yellow text-csu-black hover:bg-csu-yellow/90 border-none">
+          <button className="btn bg-csu-white text-csu-black hover:bg-csu-white/90 border-none">
             Plataforma do CSU
           </button>
         </div>

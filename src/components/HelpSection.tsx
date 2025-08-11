@@ -38,18 +38,18 @@ export default function HelpSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-csu-red via-red-700 to-red-900 relative overflow-hidden">
                    {/* Background Pattern */}
              <div className="absolute inset-0 opacity-5">
-               <div className="absolute top-10 left-10 w-32 h-32 bg-csu-yellow rounded-full blur-3xl"></div>
-               <div className="absolute bottom-10 right-10 w-40 h-40 bg-csu-yellow rounded-full blur-3xl"></div>
+               <div className="absolute top-10 left-10 w-32 h-32 bg-csu-white rounded-full blur-3xl"></div>
+               <div className="absolute bottom-10 right-10 w-40 h-40 bg-csu-white rounded-full blur-3xl"></div>
                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-csu-red rounded-full blur-3xl"></div>
              </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Main Question */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-csu-yellow mb-8 drop-shadow-lg">
+          <h2 className="text-5xl md:text-6xl font-bold text-csu-white mb-8 drop-shadow-lg">
             O que deseja saber?
           </h2>
         </div>
@@ -69,13 +69,13 @@ export default function HelpSection() {
                     className="p-6 cursor-pointer flex items-center justify-between"
                     onClick={() => toggleItem(index)}
                   >
-                    <h3 className="text-xl font-semibold text-csu-yellow flex-1">
+                    <h3 className="text-xl font-semibold text-csu-white flex-1">
                       {item.question}
                     </h3>
                     <div className="flex items-center">
                       <div className="w-6 h-6 flex items-center justify-center">
                         <svg 
-                          className={`w-5 h-5 text-csu-yellow transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                          className={`w-5 h-5 text-csu-white transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                           fill="none" 
                           stroke="currentColor" 
                           viewBox="0 0 24 24"
@@ -91,7 +91,7 @@ export default function HelpSection() {
                     isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}>
                     <div className="px-6 pb-6">
-                                             <div className="w-full h-1 bg-csu-yellow mb-4"></div>
+                                             <div className="w-full h-1 bg-csu-white mb-4"></div>
                       <div className="text-gray-300 leading-relaxed whitespace-pre-line">
                         {item.answer}
                       </div>
@@ -117,7 +117,7 @@ export default function HelpSection() {
                  
                  <button
                    onClick={handleReport}
-                   className="btn btn-lg bg-csu-yellow text-csu-black hover:bg-csu-yellow/90 border-none px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-xl"
+                   className="btn btn-lg bg-csu-white text-csu-black hover:bg-csu-white/90 border-none px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-xl"
                  >
                    <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
@@ -128,8 +128,8 @@ export default function HelpSection() {
 
         {/* Contact Line */}
         <div className="text-center">
-                           <div className="inline-flex items-center bg-gray-800 text-csu-yellow px-8 py-4 rounded-xl shadow-lg">
-                   <svg className="w-8 h-8 mr-4 text-csu-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <div className="inline-flex items-center bg-gray-800 text-csu-white px-8 py-4 rounded-xl shadow-lg">
+                   <svg className="w-8 h-8 mr-4 text-csu-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
             </svg>
             <div className="text-center">

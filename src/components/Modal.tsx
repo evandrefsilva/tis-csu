@@ -244,7 +244,7 @@ export default function Modal() {
                 currentStep === 1 ? "block" : "hidden"
               }`}
             >
-              <div className="bg-gradient-to-br from-csu-red/5 via-csu-yellow/5 to-csu-red/10 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-csu-red/30 shadow-lg">
+              <div className="bg-gradient-to-br from-csu-red/5 via-csu-white/5 to-csu-red/10 p-4 sm:p-6 md:p-8 rounded-xl border-2 border-csu-red/30 shadow-lg">
                 <h4 className="font-bold text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-csu-black flex items-center justify-center flex-col sm:flex-row">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 bg-csu-red rounded-full flex items-center justify-center mb-2 sm:mb-0 sm:mr-4">
                     <svg
@@ -387,7 +387,7 @@ export default function Modal() {
                 currentStep === 2 ? "block" : "hidden"
               }`}
             >
-              <div className="bg-gradient-to-br from-csu-black/5 via-csu-yellow/5 to-csu-black/10 p-8 rounded-xl border-2 border-csu-black/30 shadow-lg">
+              <div className="bg-gradient-to-br from-csu-black/5 via-csu-white/5 to-csu-black/10 p-8 rounded-xl border-2 border-csu-black/30 shadow-lg">
                 <h4 className="font-bold text-2xl mb-8 text-csu-black flex items-center justify-center">
                   <div className="w-10 h-10 bg-csu-black rounded-full flex items-center justify-center mr-4">
                     <svg
@@ -544,9 +544,9 @@ export default function Modal() {
                 currentStep === 3 ? "block" : "hidden"
               }`}
             >
-              <div className="bg-gradient-to-br from-csu-yellow/5 via-csu-red/5 to-csu-yellow/10 p-8 rounded-xl border-2 border-csu-yellow/30 shadow-lg">
+              <div className="bg-gradient-to-br from-csu-white/5 via-csu-red/5 to-csu-white/10 p-8 rounded-xl border-2 border-csu-white/30 shadow-lg">
                 <h4 className="font-bold text-2xl mb-8 text-csu-black flex items-center justify-center">
-                  <div className="w-10 h-10 bg-csu-yellow rounded-full flex items-center justify-center mr-4">
+                  <div className="w-10 h-10 bg-csu-white rounded-full flex items-center justify-center mr-4">
                     <svg
                       className="w-6 h-6 text-csu-black"
                       fill="none"
@@ -573,7 +573,7 @@ export default function Modal() {
                       </span>
                     </label>
                     <textarea
-                      className="textarea textarea-bordered w-full h-40 text-lg focus:border-csu-yellow focus:ring-2 focus:ring-csu-yellow/20 transition-all duration-300 bg-white border-2 border-csu-yellow/30 rounded-lg resize-none"
+                      className="textarea textarea-bordered w-full h-40 text-lg focus:border-csu-white focus:ring-2 focus:ring-csu-white/20 transition-all duration-300 bg-white border-2 border-csu-white/30 rounded-lg resize-none"
                       placeholder="Descreva detalhadamente sua reclamação, incluindo fatos, datas e pessoas envolvidas..."
                       value={formData.descricao}
                       onChange={(e) =>
@@ -591,7 +591,7 @@ export default function Modal() {
                       </span>
                     </label>
                     <select
-                      className="select select-lg w-full select-bordered bg-white border-2 border-csu-yellow/30 focus:border-csu-yellow focus:ring-2 focus:ring-csu-yellow/20 transition-all duration-300 rounded-lg"
+                      className="select select-lg w-full select-bordered bg-white border-2 border-csu-white/30 focus:border-csu-white focus:ring-2 focus:ring-csu-white/20 transition-all duration-300 rounded-lg"
                       value={formData.quemEscreveu}
                       onChange={(e) =>
                         handleInputChange("quemEscreveu", e.target.value)
@@ -611,10 +611,10 @@ export default function Modal() {
                         Anexar Documentos
                       </span>
                     </label>
-                    <div className="border-2 border-dashed border-csu-yellow/30 rounded-lg p-6 bg-white hover:border-csu-yellow/50 transition-all duration-300">
+                    <div className="border-2 border-dashed border-csu-white/30 rounded-lg p-6 bg-white hover:border-csu-white/50 transition-all duration-300">
                       <input
                         type="file"
-                        className="file-input file-input-bordered w-full focus:border-csu-yellow focus:ring-2 focus:ring-csu-yellow/20 transition-all duration-300 rounded-lg"
+                        className="file-input file-input-bordered w-full focus:border-csu-white focus:ring-2 focus:ring-csu-white/20 transition-all duration-300 rounded-lg"
                         multiple
                         onChange={(e) =>
                           handleInputChange("documentos", e.target.files)
@@ -628,7 +628,7 @@ export default function Modal() {
 
                   {/* Termos e Condições */}
                   <div className="form-control">
-                    <div className="bg-white p-6 rounded-lg border-2 border-csu-yellow/30 shadow-sm">
+                    <div className="bg-white p-6 rounded-lg border-2 border-csu-white/30 shadow-sm">
                       <label className="label cursor-pointer">
                         <div className="flex items-start space-x-4">
                           <input
@@ -693,7 +693,7 @@ export default function Modal() {
                     type="button"
                     className={`btn btn-md sm:btn-lg px-4 sm:px-8 transition-all duration-300 w-full ${
                       isStepValid(currentStep)
-                        ? "bg-csu-yellow text-csu-black hover:bg-yellow-400 shadow-lg hover:scale-105 border-2 border-csu-yellow font-bold rounded-lg"
+                        ? "bg-csu-white text-csu-black hover:bg-yellow-400 shadow-lg hover:scale-105 border-2 border-csu-white font-bold rounded-lg"
                         : "bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg"
                     }`}
                     onClick={handleNext}
@@ -768,7 +768,7 @@ export default function Modal() {
           {/* Header */}
           <div className="text-center mb-6 sm:mb-8">
             <div className="flex items-center justify-center mb-4 flex-col sm:flex-row">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-csu-yellow rounded-full flex items-center justify-center mb-2 sm:mb-0 sm:mr-3">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-csu-white rounded-full flex items-center justify-center mb-2 sm:mb-0 sm:mr-3">
                 <svg
                   className="w-5 h-5 sm:w-6 sm:h-6 text-white"
                   fill="none"
@@ -795,7 +795,7 @@ export default function Modal() {
                   <div key={step} className="flex items-center">
                     <div
                       className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm transition-all duration-300 ${
-                        step <= 1 ? "bg-csu-yellow scale-110" : "bg-gray-300"
+                        step <= 1 ? "bg-csu-white scale-110" : "bg-gray-300"
                       }`}
                     >
                       {step < 1 ? (
@@ -816,7 +816,7 @@ export default function Modal() {
                     </div>
                     <span
                       className={`ml-2 sm:ml-3 text-xs sm:text-sm font-medium transition-colors duration-300 hidden sm:block ${
-                        step <= 1 ? "text-csu-yellow" : "text-gray-500"
+                        step <= 1 ? "text-csu-white" : "text-gray-500"
                       }`}
                     >
                       {step === 1 ? "Identificação" : "Denúncia"}
@@ -824,7 +824,7 @@ export default function Modal() {
                     {step < 2 && (
                       <div
                         className={`w-6 sm:w-12 h-1 ml-2 sm:ml-6 transition-all duration-300 ${
-                          step < 1 ? "bg-csu-yellow" : "bg-gray-300"
+                          step < 1 ? "bg-csu-white" : "bg-gray-300"
                         }`}
                       ></div>
                     )}
@@ -841,9 +841,9 @@ export default function Modal() {
                 denunciaStep === 1 ? "block" : "hidden"
               }`}
             >
-              <div className="bg-gradient-to-br from-csu-yellow/5 via-csu-yellow/5 to-csu-yellow/10 p-8 rounded-xl border-2 border-csu-yellow/30 shadow-lg">
+              <div className="bg-gradient-to-br from-csu-white/5 via-csu-white/5 to-csu-white/10 p-8 rounded-xl border-2 border-csu-white/30 shadow-lg">
                 <h4 className="font-bold text-2xl mb-8 text-csu-black flex items-center justify-center">
-                  <div className="w-10 h-10 bg-csu-yellow rounded-full flex items-center justify-center mr-4">
+                  <div className="w-10 h-10 bg-csu-white rounded-full flex items-center justify-center mr-4">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="none"
@@ -867,8 +867,8 @@ export default function Modal() {
                     type="button"
                     className={`btn btn-outline w-full p-3 sm:p-4 border-2 transition-all duration-300 text-sm sm:text-base ${
                       isAnonymous
-                        ? "border-csu-yellow bg-csu-yellow/10 text-csu-black"
-                        : "border-csu-yellow/30 hover:border-csu-yellow"
+                        ? "border-csu-white bg-csu-white/10 text-csu-black"
+                        : "border-csu-white/30 hover:border-csu-white"
                     }`}
                     onClick={() => setIsAnonymous(!isAnonymous)}
                   >
@@ -902,7 +902,7 @@ export default function Modal() {
                         <input
                           type="text"
                           placeholder="Nome completo"
-                          className="input input-lg w-full input-bordered bg-white border-2 border-csu-yellow/30 focus:border-csu-yellow focus:ring-2 focus:ring-csu-yellow/20 transition-all duration-300 rounded-lg"
+                          className="input input-lg w-full input-bordered bg-white border-2 border-csu-white/30 focus:border-csu-white focus:ring-2 focus:ring-csu-white/20 transition-all duration-300 rounded-lg"
                           value={denunciaData.nomeDenunciante}
                           onChange={(e) =>
                             handleDenunciaInputChange(
@@ -923,7 +923,7 @@ export default function Modal() {
                         <input
                           type="tel"
                           placeholder="Número de telefone"
-                          className="input input-lg w-full input-bordered bg-white border-2 border-csu-yellow/30 focus:border-csu-yellow focus:ring-2 focus:ring-csu-yellow/20 transition-all duration-300 rounded-lg"
+                          className="input input-lg w-full input-bordered bg-white border-2 border-csu-white/30 focus:border-csu-white focus:ring-2 focus:ring-csu-white/20 transition-all duration-300 rounded-lg"
                           value={denunciaData.telefoneDenunciante}
                           onChange={(e) =>
                             handleDenunciaInputChange(
@@ -945,7 +945,7 @@ export default function Modal() {
                           </span>
                         </label>
                         <select
-                          className="select select-lg w-full select-bordered bg-white border-2 border-csu-yellow/30 focus:border-csu-yellow focus:ring-2 focus:ring-csu-yellow/20 transition-all duration-300 rounded-lg"
+                          className="select select-lg w-full select-bordered bg-white border-2 border-csu-white/30 focus:border-csu-white focus:ring-2 focus:ring-csu-white/20 transition-all duration-300 rounded-lg"
                           value={denunciaData.sexoDenunciante}
                           onChange={(e) =>
                             handleDenunciaInputChange(
@@ -971,7 +971,7 @@ export default function Modal() {
                           <input
                             type="text"
                             placeholder="dd/mm/aaaa"
-                            className="input input-lg w-full pr-12 input-bordered bg-white border-2 border-csu-yellow/30 focus:border-csu-yellow focus:ring-2 focus:ring-csu-yellow/20 transition-all duration-300 rounded-lg"
+                            className="input input-lg w-full pr-12 input-bordered bg-white border-2 border-csu-white/30 focus:border-csu-white focus:ring-2 focus:ring-csu-white/20 transition-all duration-300 rounded-lg"
                             value={denunciaData.dataNascimentoDenunciante}
                             onChange={(e) =>
                               handleDenunciaInputChange(
@@ -982,7 +982,7 @@ export default function Modal() {
                             required
                           />
                           <svg
-                            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-csu-yellow/60"
+                            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-csu-white/60"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -1008,7 +1008,7 @@ export default function Modal() {
                       <input
                         type="email"
                         placeholder="seu@email.com"
-                        className="input input-lg w-full input-bordered bg-white border-2 border-csu-yellow/30 focus:border-csu-yellow focus:ring-2 focus:ring-csu-yellow/20 transition-all duration-300 rounded-lg"
+                        className="input input-lg w-full input-bordered bg-white border-2 border-csu-white/30 focus:border-csu-white focus:ring-2 focus:ring-csu-white/20 transition-all duration-300 rounded-lg"
                         value={denunciaData.emailDenunciante}
                         onChange={(e) =>
                           handleDenunciaInputChange(
@@ -1201,7 +1201,7 @@ export default function Modal() {
                     type="button"
                     className={`btn btn-md sm:btn-lg px-4 sm:px-8 transition-all duration-300 w-full ${
                       isDenunciaStepValid(denunciaStep)
-                        ? "bg-csu-yellow text-csu-black hover:bg-csu-yellow/90 shadow-lg hover:scale-105 border-2 border-csu-yellow font-bold rounded-lg"
+                        ? "bg-csu-white text-csu-black hover:bg-csu-white/90 shadow-lg hover:scale-105 border-2 border-csu-white font-bold rounded-lg"
                         : "bg-gray-300 text-gray-500 cursor-not-allowed border-2 border-gray-300 rounded-lg"
                     }`}
                     onClick={handleDenunciaNext}

@@ -79,7 +79,7 @@ export default function Contact() {
             </div>
 
             {/* Atendimento Emergencial */}
-            <div className="bg-csu-yellow text-csu-black rounded-xl p-6 shadow-lg">
+            <div className="bg-csu-white text-csu-black rounded-xl p-6 shadow-lg">
               <h3 className="text-xl font-bold mb-4">Atendimento Emergencial</h3>
               <p className="mb-4">
                 Para casos urgentes, ligue para nossa central de atendimento 24 horas.

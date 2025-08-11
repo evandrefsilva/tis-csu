@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-csu-black via-gray-900 to-csu-black text-white py-20 relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-csu-red via-red-700 to-red-900 text-white py-20 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -16,12 +16,12 @@ export default function Footer() {
           {/* Logo e Descrição */}
           <div className="text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
-              <div className="w-12 h-12 bg-csu-yellow rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-csu-white rounded-full flex items-center justify-center">
                 <span className="text-csu-black font-bold text-xl">C</span>
               </div>
               <div>
                 <span className="text-2xl font-bold">CSU</span>
-                <div className="text-sm text-csu-yellow">CNCSU</div>
+                <div className="text-sm text-csu-white">CNCSU</div>
               </div>
             </div>
             <p className="text-white/70 leading-relaxed max-w-md mx-auto lg:mx-0">
@@ -32,24 +32,24 @@ export default function Footer() {
 
           {/* Links Rápidos */}
           <div className="text-center lg:text-left">
-            <h3 className="text-lg font-bold mb-6 text-csu-yellow">Links Rápidos</h3>
+            <h3 className="text-lg font-bold mb-6 text-csu-white">Links Rápidos</h3>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-3">
-                <a href="#indicadores" className="block text-white/70 hover:text-csu-yellow transition-colors">Indicadores</a>
-                <a href="#documentos" className="block text-white/70 hover:text-csu-yellow transition-colors">Documentos</a>
-                <a href="#parceiros" className="block text-white/70 hover:text-csu-yellow transition-colors">Parceiros</a>
+                <a href="#indicadores" className="block text-white/70 hover:text-csu-white transition-colors">Indicadores</a>
+                <a href="#documentos" className="block text-white/70 hover:text-csu-white transition-colors">Documentos</a>
+                <a href="#parceiros" className="block text-white/70 hover:text-csu-white transition-colors">Parceiros</a>
               </div>
               <div className="space-y-3">
-                <a href="#faqs" className="block text-white/70 hover:text-csu-yellow transition-colors">FAQs</a>
-                <a href="#contato" className="block text-white/70 hover:text-csu-yellow transition-colors">Contato</a>
-                <a href="#" className="block text-white/70 hover:text-csu-yellow transition-colors">Ajuda</a>
+                <a href="#faqs" className="block text-white/70 hover:text-csu-white transition-colors">FAQs</a>
+                <a href="#contato" className="block text-white/70 hover:text-csu-white transition-colors">Contato</a>
+                <a href="#" className="block text-white/70 hover:text-csu-white transition-colors">Ajuda</a>
               </div>
             </div>
           </div>
 
           {/* Informações de Contato */}
           <div className="text-center lg:text-left">
-            <h3 className="text-lg font-bold mb-6 text-csu-yellow">Informações de Contato</h3>
+            <h3 className="text-lg font-bold mb-6 text-csu-white">Informações de Contato</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-center lg:justify-start gap-3">
                 <div className="w-10 h-10 bg-csu-red/20 rounded-full flex items-center justify-center">
@@ -83,9 +83,9 @@ export default function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Redes Sociais */}
             <div className="text-center lg:text-left">
-              <h3 className="text-lg font-bold mb-4 text-csu-yellow">Nossas Redes Sociais</h3>
+              <h3 className="text-lg font-bold mb-4 text-csu-white">Nossas Redes Sociais</h3>
               <div className="flex justify-center lg:justify-start gap-4">
-                <a target="_blank" href="https://www.facebook.com/MASFAMU2020" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-csu-yellow hover:scale-110 transition-all duration-300" title="Instagram">
+                <a target="_blank" href="https://www.facebook.com/MASFAMU2020" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-csu-white hover:scale-110 transition-all duration-300" title="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="blue" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02"/></svg>
                 </a>
               </div>
@@ -94,7 +94,7 @@ export default function Footer() {
             {/* Endereço */}
             <div className="text-center lg:text-right">
               <div className="flex items-center justify-center lg:justify-end gap-3">
-                <svg className="w-5 h-5 text-csu-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-csu-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>

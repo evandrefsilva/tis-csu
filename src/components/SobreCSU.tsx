@@ -6,9 +6,9 @@ export default function SobreCSU() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-12 h-1 bg-csu-yellow rounded-full"></div>
+            <div className="w-12 h-1 bg-csu-red rounded-full"></div>
             <h2 className="text-4xl font-bold text-csu-black">Sobre o CSU</h2>
-            <div className="w-12 h-1 bg-csu-yellow rounded-full"></div>
+            <div className="w-12 h-1 bg-csu-red rounded-full"></div>
           </div>
           <p className="text-csu-black/70 text-lg max-w-2xl mx-auto">
             Sistema de informação para proteção social e desenvolvimento
@@ -18,11 +18,11 @@ export default function SobreCSU() {
         <div className="max-w-5xl mx-auto">
           {/* Logo CSU */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-6 bg-white rounded-2xl p-8 shadow-2xl border border-csu-red/20">
-              <div className="text-csu-red font-bold text-3xl">CADASTRO</div>
+            <div className="inline-flex items-center gap-6 bg-csu-red rounded-2xl p-8 shadow-2xl border border-csu-red/20">
+              <div className="text-csu-white font-bold text-lg-3xl">CADASTRO</div>
               <div className="relative">
                 <svg
-                  className="w-10 h-10 text-csu-yellow"
+                  className="w-8 h-8 text-csu-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -34,14 +34,14 @@ export default function SobreCSU() {
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   ></path>
                 </svg>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-csu-red rounded-full flex items-center justify-center shadow-lg">
-                  <div className="w-5 h-5 bg-white rounded-full"></div>
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-csu-red rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-4 h-4 bg-white rounded-full"></div>
                 </div>
               </div>
-              <div className="text-csu-yellow font-bold text-3xl">SOCIAL</div>
-              <div className="text-csu-red font-bold text-3xl">ÚNICO</div>
+              <div className="text-csu-white font-bold ">SOCIAL</div>
+              <div className="text-csu-yellow font-bold ">ÚNICO</div>
             </div>
-            <div className="text-csu-yellow font-bold text-xl mt-4">
+            <div className="text-csu-red font-bold text-xl mt-4">
               Incluir para o Desenvolvimento
             </div>
           </div>
@@ -78,9 +78,9 @@ export default function SobreCSU() {
 
             <div className="bg-white rounded-xl p-6 shadow-lg border border-csu-red/20">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-csu-yellow/20 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-csu-white/20 rounded-full flex items-center justify-center">
                   <svg
-                    className="w-5 h-5 text-csu-yellow"
+                    className="w-5 h-5 text-csu-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -128,15 +128,15 @@ export default function SobreCSU() {
 // Nova seção sobre MASFAMU Angola
 export function MASFAMUAngola() {
   return (
-    <section className="py-20 bg-gradient-to-br from-csu-red/5 via-csu-yellow/5 to-csu-red/10">
+    <section className="py-20 bg-gradient-to-br from-csu-red/5 via-csu-white/5 to-csu-red/10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-12 h-1 bg-csu-yellow rounded-full"></div>
+            <div className="w-12 h-1 bg-csu-red rounded-full"></div>
             <h2 className="text-4xl font-bold text-csu-black">
               MASFAMU Angola
             </h2>
-            <div className="w-12 h-1 bg-csu-yellow rounded-full"></div>
+            <div className="w-12 h-1 bg-csu-red rounded-full"></div>
           </div>
           <p className="text-csu-black/70 text-lg max-w-2xl mx-auto">
             Ministério da Ação Social, Família e Promoção da Mulher
@@ -174,9 +174,9 @@ export function MASFAMUAngola() {
 
             <div className="bg-white rounded-xl p-6 shadow-lg border border-csu-red/20">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-csu-yellow/20 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-csu-white/20 rounded-full flex items-center justify-center">
                   <svg
-                    className="w-6 h-6 text-csu-yellow"
+                    className="w-6 h-6 text-csu-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -262,7 +262,7 @@ export function MASFAMUAngola() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-csu-yellow rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 bg-csu-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </div>
                 <div>
@@ -277,7 +277,7 @@ export function MASFAMUAngola() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-csu-yellow rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 bg-csu-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </div>
                 <div>

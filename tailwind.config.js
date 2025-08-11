@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'csu-red': '#DA291C',
+        'csu-red': '#CF142B',
         'csu-black': '#000000',
         'csu-yellow': '#FFCD00',
+        'csu-white': '#ffffff',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

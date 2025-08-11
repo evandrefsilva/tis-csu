@@ -63,7 +63,7 @@ export default function MapComponent({ className = "h-96 w-full" }: MapComponent
               <div className="text-center">
                 <h3 className="font-bold text-lg text-csu-red mb-2">{location.name}</h3>
                 <p className="text-sm text-gray-600 mb-1">{location.address}</p>
-                <span className="inline-block bg-csu-yellow text-csu-black px-2 py-1 rounded text-xs font-semibold">
+                <span className="inline-block bg-csu-white text-csu-black px-2 py-1 rounded text-xs font-semibold">
                   {location.type}
                 </span>
               </div>
