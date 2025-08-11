@@ -90,7 +90,7 @@ export default function Header() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-white">
             <li><a href="#indicadores" className={`transition-colors ${activeSection === 'indicadores' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'indicadores')}>Indicadores</a></li>
-            <li><a href="#documentos" className={`transition-colors ${activeSection === 'documentos' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'documentos')}>Documentos</a></li>
+            <li><a href="#documentos" className={`transition-colors ${activeSection === 'documentos' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'documentos')}>Editais</a></li>
             <li><a href="#parceiros" className={`transition-colors ${activeSection === 'parceiros' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'parceiros')}>Parceiros</a></li>
             <li><a href="#faqs" className={`transition-colors ${activeSection === 'faqs' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'faqs')}>FAQs</a></li>
             <li><a href="#contato" className={`transition-colors ${activeSection === 'contato' ? 'bg-csu-yellow/20 text-csu-yellow' : ''}`} onClick={(e) => handleSmoothScroll(e, 'contato')}>Contato</a></li>

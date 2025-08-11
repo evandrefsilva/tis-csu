@@ -134,7 +134,7 @@ export default function HelpSection() {
             </svg>
             <div className="text-center">
               <div className="text-sm font-medium">LINHA VERDE GRÁTIS</div>
-              <div className="text-2xl font-bold">+244 930 097 456</div>
+              <div className="text-2xl font-bold">939 092 959 /  939 092 969 </div>
               <div className="text-xs">Acesso Nacional</div>
             </div>
           </div>

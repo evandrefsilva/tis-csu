@@ -351,9 +351,9 @@ export function MASFAMUAngola() {
                 <div>
                   <h4 className="font-bold">Contacto</h4>
                   <p className="text-white/80">
-                    Telefone: +244 930 097 456
+                    Telefone: 939 092 959 /  939 092 969 
                     <br />
-                    Email: geral@masfamu.gov.ao
+                    Email: aquisicoes.csu@csu.gov.ao
                   </p>
                 </div>
               </div>

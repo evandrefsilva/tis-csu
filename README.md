@@ -168,7 +168,7 @@ A landing page possui navegação suave entre seções:
 
 ## 📞 Informações de Contato
 
-- **Telefone**: +244 930 097 456
+- **Telefone**: 939 092 959 /  939 092 969 
 - **Email**: cncsu.oficial@mfids.gov.cv
 - **Horário**: Segunda a Sexta, 8h às 18h
 
