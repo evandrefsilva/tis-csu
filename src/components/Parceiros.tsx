@@ -16,9 +16,9 @@ export default function Parceiros() {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {parceiros.map((parceiro, index) => (
-            <div key={index} className="card bg-csu-red/5 hover:bg-csu-white/10 transition-colors cursor-pointer border border-csu-red/20">
-              <div className="card-body text-center">
-                <img src={parceiro} alt="" />
+            <div key={index} className="card bg-csu-red/5 hover:bg-csu-white/10 transition-colors cursor-pointer border rounded-lg border-csu-red/20">
+              <div className="card-body text-center p-6">
+                <img src={parceiro} alt="" className="image-fit rounded-lg" />
               </div>
             </div>
           ))}

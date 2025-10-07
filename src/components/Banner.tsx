@@ -70,7 +70,7 @@ export default function Banner() {
               {/* Secondary Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button 
-                  className="btn bg-csu-red/90 text-white hover:bg-csu-red border-none px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                  className="btn flex flex-row items-center justify-center rounded bg-csu-red/90 text-white hover:bg-csu-red border-none px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 backdrop-blur-sm"
                   onClick={() => {
                     const modal = document.getElementById('modal-reclamacao') as HTMLDialogElement;
                     if (modal) modal.showModal();
@@ -82,7 +82,7 @@ export default function Banner() {
                   Fazer Reclamação
                 </button>
                 <button 
-                  className="btn bg-csu-yellow/90 text-csu-black hover:bg-csu-white border-none px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                  className="btn flex flex-row items-center justify-center rounded bg-csu-yellow/90 text-csu-black hover:bg-csu-white border-none px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 backdrop-blur-sm"
                   onClick={() => {
                     const modal = document.getElementById('modal-denuncia') as HTMLDialogElement;
                     if (modal) modal.showModal();

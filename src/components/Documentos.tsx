@@ -46,13 +46,13 @@ export default function Documentos() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {data.map((doc, index) => (
-            <div key={index} className="card bg-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer border border-csu-red/20">
+            <div key={index} className="card bg-white py-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer border border-csu-red/20">
               <div className="card-body text-center">
                 <div className="text-4xl mb-4">{doc.icon}</div>
-                <h3 className="card-title text-xl justify-center text-csu-black">{doc.title}</h3>
+                <h3 className="card-title font-bold text-xl justify-center text-csu-black">{doc.title}</h3>
                 <p className="text-csu-black/70">{doc.desc}</p>
                 <div className="card-actions justify-center mt-4">
-                  <a download={doc.doc} href={doc.doc} className="btn btn-sm bg-csu-red text-white hover:bg-csu-red/90 border-none">
+                  <a download={doc.doc} href={doc.doc} className="btn btn-sm rounded px-4 py-2 bg-csu-red text-white hover:bg-csu-red/90 border-none">
                     Baixar {doc.type}
                   </a>
                 </div>

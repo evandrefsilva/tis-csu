@@ -30,7 +30,7 @@ export default function Localizacao() {
 
           {/* Locations */}
           <div className="space-y-6">
-            <div className="card bg-csu-red text-white shadow-xl">
+            <div className="card bg-csu-red text-white shadow-xl p-6 rounded-lg">
               <div className="card-body">
                 <h3 className="card-title mb-4">Horário de Funcionamento</h3>
                 <div className="space-y-2">

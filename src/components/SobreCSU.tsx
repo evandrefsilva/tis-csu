@@ -133,12 +133,12 @@ export function MASFAMUAngola() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 mb-4">
             <div className="w-12 h-1 bg-csu-red rounded-full"></div>
-            <h2 className="text-4xl font-bold text-csu-black">
+            <h2 className="text-4xl font-bold text-csu-white">
               MASFAMU Angola
             </h2>
             <div className="w-12 h-1 bg-csu-red rounded-full"></div>
           </div>
-          <p className="text-csu-black/70 text-lg max-w-2xl mx-auto">
+          <p className="text-csu-white/70 text-lg max-w-2xl mx-auto">
             Ministério da Ação Social, Família e Promoção da Mulher
           </p>
         </div>
