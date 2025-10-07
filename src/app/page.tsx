@@ -12,10 +12,12 @@ import FAQs from "../components/FAQs";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
+import WelcomeModal from "../components/WelcomeModal";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-base-100">
+      <WelcomeModal />
       <Header />
       <Banner />
       <TutelaCSU />
